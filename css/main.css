@@ -1,0 +1,235 @@
+:root {
+    --whitebackground : #fff;
+    --site-color-01 : #c13584;
+    --site-color-01-hover : #9e2f6e;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #fff;
+}
+
+body::after {
+    content: url(//img/facebook-color.png) url(//img/instagram-color.png);
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+
+}
+
+.wrapper-main {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.8rem;
+    line-height: 32px;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.6rem;
+    line-height: 32px;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2.6rem;
+    line-height: 32px;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 30px;
+    color: #fff;
+    font-family: "Noto Sans", sans-serif;
+}
+
+a {
+    cursor: pointer;
+    font-size: 1.4rem;
+    line-height: 18px;
+    color: white;
+    font-family: "Noto Sans", sans-serif;
+}
+
+.box {
+    width: 100px;
+    height: 200vh;
+    background-color: red;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--whitebackground);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.div-nav ul {
+    list-style: none;
+    margin-left: 40px;
+}
+
+.div-nav ul li{
+    display: inline;
+    float: left;
+    
+}
+
+.div-nav ul li a{
+    padding: 0 10px;
+    font-family: "Noto Sans", sans-serif;
+    line-height: 60px;
+    display: block;
+    color: black;
+}
+
+.div-nav ul li a:hover {
+    color: #c13584;
+}
+
+.div-logo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    padding-left: 60px;
+}
+
+.div-logo img {
+    height: 40px;
+    align-self: center;
+}
+
+.div-nav {
+    width: fit-content;
+    height: 100%;
+    
+}
+
+.div-sm {
+    width: fit-content;
+    height: 100%;
+    padding-right: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.div-sm-fb {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-sm-fb:hover {
+    background-image: url(../img/facebook-color.png);
+}
+
+.div-sm-ig {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/instagram.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-sm-ig:hover {
+    background-image: url(../img/instagram-color.png);
+}
+
+.burger-menu, .burger-menu-btn {
+    display: none;
+}
+
+
+/*MOBILE VERSION*/
+
+@media only screen and (max-width: 600px) {
+    
+    .burger-menu-btn {
+        display: block;
+        margin-left: 1vw;
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/icons/burger-bar.png), url(../img/icons/close.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 5vh;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: #111;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .burger-menu ul li {
+        flex-basis: 100%;
+        border-top: 2px solid black;
+    }
+
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid black;
+    }
+
+    .burger-menu ul li a {
+        display: block;
+        height: 100%;
+        font-size: 3rem;
+        padding: 3vh 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .wrapper-main {
+        width: calc(100% - 4vw);
+    }
+
+    .div-logo {
+        padding-left: 2vw;
+    }
+
+    .div-nav {
+        display: none;
+    }
+
+    .div-sm {
+        padding-right: 3vw;
+    }
+}
